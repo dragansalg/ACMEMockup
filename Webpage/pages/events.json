@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "category":"Music/ Show",
+        "name":"Bryan Adams- Shine A Light",
+        "Date": "April 2021 8.00pm",
+
+        "Venue": "Ericsson Globe",
+        "Participants":
+        "organizer":
+    },   
+    {
+        "id":2,
+        "category":"Music/ Show",
+        "Date": 
+
+        "Venue": 
+        "Participants":
+        "organizer":
+    },
+    {
+        "id":3,
+        "category":"Music/ Show",
+        "Date": 
+
+        "Venue": 
+        "Participants":
+        "organizer":
+    }
+    {
+        "id":4,
+        "category":"Music/ Show",
+        "Date": 
+
+        "Venue": 
+        "Participants":
+        "organizer":
+    },
+    {
+        "id":5,
+        "category":"conference",
+        "Date": 
+
+        "Venue": 
+        "Participants":
+        "organizer":
+    }
+           
+            
+
+]
