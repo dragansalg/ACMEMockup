@@ -1,8 +1,17 @@
 .menulist { grid-area: menu; }
-.logo { grid-area: header; }
+.header { grid-area: header; }
 .itemHighlight { grid-area: main; }
 .itemText { grid-area: mainText; }
 .footer { grid-area: footer; }
+
+.logo {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 35px;
+    left: 1020px;
+    max-width: 10%;
+}
 
 .topNavigation {
     display: grid;
