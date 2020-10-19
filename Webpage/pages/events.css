@@ -1,8 +1,10 @@
 body{
     margin:5%;
+    background-color: #d9d9d9;
 }
 #header{
     position:relative;
+  
 }
 .nav{
     position:relative;
@@ -15,7 +17,9 @@ body{
 }
 #loggo{
     float:right;
+    width:10%;
 }
+
 #header h1{
     display:inline;
     
