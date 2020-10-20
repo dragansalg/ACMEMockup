@@ -20,28 +20,23 @@ html {
 
 .contactPerson {
   display: grid;
-  grid-template-columns: 600px 282px;
+  grid-template-columns: fit-content(70ch) fit-content(10%);
   grid-template-areas: "text img";
   justify-content: end;
 }
 
 .contactPerson:nth-child(even) {
   grid-template-areas: "img text";
-  grid-template-columns: 282px 600px;
+  grid-template-columns: fit-content(10%) fit-content(70ch);
   justify-content: start;
 }
-/* .contactPerson:nth-child(odd) {
-  justify-items: end;
-}
-.contactPerson:nth-child(even) {
-  justify-items: start;
-}  */
 
 .text {
   grid-area: text;
 }
 .contactPerson img {
-  width: 250px;
+  width: 360px;
   margin: 1rem;
   grid-area: img;
+  box-sizing: border-box;
 }
