@@ -1,5 +1,5 @@
-
-
-
-//using json or object? for events
-let events=
+fetch('events.json')
+.then(response=>response.json())
+.then(data=>{
+    console.log(data);
+});
