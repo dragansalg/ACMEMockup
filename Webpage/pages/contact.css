@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  max-height: 100vh;
+  gap: 0.2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.contactPerson {
+  display: grid;
+  grid-template-columns: 1fr 80%;
+}
+
+.container > .contactPerson:nth-child(odd) {
+  justify-self: end;
+}
+.container > .contactPerson:nth-child(even) {
+  justify-self: start;
+}
+
+.contactPerson > img {
+  float: left;
+  height: 150px;
+  width: auto;
+  margin: 1rem;
+}
