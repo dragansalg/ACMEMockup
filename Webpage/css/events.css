@@ -13,8 +13,10 @@ h1#event_page{
 div.event_list{
     display:inline-block;
     margin:2%;
+    width:45%;
 }
 h3{
     text-align: center;
     text-decoration: underline;
+    font-size:1em;
 }
