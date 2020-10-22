@@ -1,15 +1,22 @@
-fetch('../scripts/events.json')
+/*fetch('events.json')
 .then(response=>response.json())
 .then(data=>{
-   console.log(data);
-});
-//inuti fetchen
-/*let header=document.getElementById("header");
-let event1=document.createElement("div");
-let heading= document.createElement("h1");
-heading.innerHTML=data[1].name;
-let image= document.createElement("img");
-image.setAttribute('src',data[1].imageLocation);
-event1.appendChild(heading);
-event1.appendChild(image);
-header.after(event1);*/
+    console.log(data);
+});*/
+document.addEventListener("DOMContentLoaded",function(){
+   let filter=document.getElementById("filter_bar");
+ 
+   filter.addEventListener("click",function(e){
+        let event_list= document.getElementsByClassName("event_list");
+        console.log(event_list);
+        if(e.target.innerHTML=="CONFERENCE"){
+           
+        for(let item of event_list){
+            console.log(item);
+            if(item.className!=="event_list conference"){
+               
+            }
+        }
+      }
+   })
+})

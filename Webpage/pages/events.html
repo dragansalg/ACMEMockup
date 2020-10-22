@@ -5,55 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
     <link href="../css/events.css" rel="stylesheet">
+    <link href="../css/mainpage.css" rel="stylesheet">
 </head>
 <body>
-    <h1 id="event_page">Events</h1>
-    <div>
+    <div class="topNavigation">
+        <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
         
-        <div class="event_list">
+        <label for="toggle-checkbox" class="menulist">
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="">Item 1</a> </li>
+                <li><a href="">Item 2</a> </li>
+                <li><a href="">Item 4</a> </li>
+                <li><a href="">Item 3</a> </li>
+                <li><a href="">Item 5</a> </li>
+                
+            </ul>
+        </nav>
+        
+        <div class="logo"><img src="../images/logo-v3.png"></div>
+    </div>
+    
+    <h1 id="event_head">Events</h1>
+    <div id="filter">
+        <select name="category" id="category" required>
+            <option value="" disabled selected hidden>FILTER EVENTS BY CATEGORY</option>
+            <option value="conference">Conference</option>
+            <option value="show">Music/Show</option>
+            <option value="sports">Sports</option>
+            <option value="wedding">Wedding</option>
+        </select>
+    </div>
+    <div id="filter_bar">
+        <p class="event_filter">ALL</p><p> | </p>
+        <p class="event_filter">CONFERENCE</p><p> | </p>
+        <p class="event_filter">MUSIC/SHOW</p><p> | </p>
+        <p class="event_filter">SPORTS</p><p> | </p>
+        <p class="event_filter">WEDDING</p>
+
+    </div>
+    <div id="events">
+        
+        <div class="event_list conference">
             <h3>Conference on Green Energy & Technology</h3>
             <img src="../images/conference_greenenergy.jpg" class="event_img">
         </div>
-        <div class="event_list">
-            <h3>Conference on Advances in health Care</h3>
+        <div class="event_list conference">
+            <h3>Advances in health Care</h3>
             <img src="../images/conference_health.jpg" class="event_img">
         </div>    
-        <div class="event_list">
-            <h3>Stockholm International horse show</h3>
+        <div class="event_list sports">
+            <h3><a href="event_detail.html">Stockholm International horse show</a></h3>
             <img src="../images/horse_show.jpg"class="event_img">
         </div>
-        <div class="event_list">
+        <div class="event_list show">
             <h3>Seven Worlds one planet (BBC Show)</h3>
             <img src="../images/bbc.jpg"class="event_img">
         </div>
-        <div class="event_list">
+        <div class="event_list wedding">
             <h3>Wedding - beach theme</h3>
             <img src="../images/beach_wedding.jpg"class="event_img">
         </div>
-        <div class="event_list">
+        <div class="event_list sports">
             <h3>ISU World figure skating Championship</h3>
             <img src="../images/skating.jpg"class="event_img">
         </div>
         
-        <div class="event_list">
-            <h3>Church Wedding</h3>
+        <div class="event_list wedding">
+            <h3>Seven Worlds one planet (BBC Show)</h3>
             <img src="../images/church_wedding.jpg"class="event_img">
         </div>
-        <div class="event_list">
+        <div class="event_list show">
             <h3>Hans Zimmer Live Show</h3>
             <img src="../images/hans_zimmer.jpg"class="event_img">
         </div>
-        <div class="event_list">
+        <div class="event_list show">
             <h3>Bryan Adams- Shine A Light</h3>
             <img src="../images/bryan_adams.jpg" class="event_img">
-        </div>
-        
-        
-       
-        
-        
+        </div>    
     </div>
-    
+    <div class="bottomNavigation">
+        <div class="footer">Footer</div>
+    </div>
     <script src="../scripts/events.js"></script>
 </body>
 </html>

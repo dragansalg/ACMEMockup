@@ -1,0 +1,157 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.itemHighlight { grid-area: main; }
+.itemText { grid-area: mainText; }
+.footer { grid-area: footer; }
+
+.topNavigation {
+    display: flex;
+    height: 12vh;
+    position: relative;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.menulist {
+    position: relative;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    cursor:pointer;
+    margin-left: 60px;
+    background-color:#ffffff;
+}
+
+.menulist span,
+.menulist span::before,
+.menulist span::after{
+    position: absolute;
+    content : '';
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background:#313131;
+    transition: all 250ms ease-in-out;
+}
+
+.menulist span::before{
+    transform: translateY(-10px);
+}
+
+.menulist span::after{
+    transform: translateY(10px);
+}
+
+.toggle-checkbox:checked ~ .menulist>span::after {
+    transform: rotate(270deg) translateX(-1px)translateY(-1px);
+}
+
+.toggle-checkbox:checked ~ .menulist>span {
+    transform: rotate(45deg) ;
+}
+
+.toggle-checkbox:checked ~ .menulist>span::before{
+    transform: translateY(5px);
+    opacity: 0;
+}
+
+.toggle-checkbox:checked ~ nav{
+    transform: translateY(-3vh);
+    display: block;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 14vh;
+    left: 2vw;
+    width: 200px;
+    font-size: 1.5em;
+    transform: translateY(-3vh);
+    border-radius: 10px;
+    transition: all 250ms ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+
+    padding: 0;
+}
+
+nav li {
+    padding: 1em;
+    font-weight: 700;
+    background-color: #ffffff;
+    border: solid 1px #f4f4f4;
+  }
+
+nav li:hover{
+    background-color: #67E3F4;
+}
+nav li a{
+    text-decoration: none;
+    color: #313131;
+}
+
+.logo img{
+    height: 10vh;
+    margin-right: 30px;
+    max-height: 15vh;
+}
+
+
+.eventHighlights {
+    display: grid;
+    grid-template-areas:
+    'main main main main main main'
+    'mainText mainText mainText mainText mainText mainText';
+    grid-gap: 0px;
+    background-color: #2196f3;
+    padding: 6px;
+}
+
+.eventHighlights > div {
+    background-color: darkgray;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+.bottomNavigation {
+    display: grid;
+    grid-template-areas:
+    'footer footer footer footer footer footer';
+    grid-gap: 0px;
+    background-color: #2196f3;
+    padding: 6px;
+}
+
+.bottomNavigation > div {
+    background-color: darkgray;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+}
