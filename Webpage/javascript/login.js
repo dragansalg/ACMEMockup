@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
      function checkUser() {
           let input_username = document.getElementById("username").value;
-          let input_password = document.getElementById("password").value;
-          
-          admins.forEach((admin) => {
-               if(input_username == admin.username && input_password == admin.password) {
+          let input_password = document.getElementById("password").value;        
+
+          for(let i = 0; i < admins.length; i++) {
+               if(input_username == admins[i].username && input_password == admins[i].password) {
                     console.log("it's a match");
-                    return;
-               }               
-          }); 
-          console.log("incorrect username and/or password");
+                    return;                    
+               }                             
+          }
+          console.log("no match");       
      }
      
 })
