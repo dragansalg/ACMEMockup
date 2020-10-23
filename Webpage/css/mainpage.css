@@ -97,7 +97,7 @@ nav {
     border-radius: 10px;
     transition: all 250ms ease-in-out;
     overflow: hidden;
-    z-index: 1;
+    z-index: 9999;
 }
 
 nav ul{
@@ -127,50 +127,80 @@ nav li a{
     margin-right: 30px;
     max-height: 15vh;
 }
-.container{
+
+/* .container{
     position: relative;
     background-color: #fafafa;
-}
+} */
+
 .section-title {
+    background-color: #fafafa;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-   
     width: 100%;
     font-size: 1.7rem;
     padding-top: 3rem;
     z-index: 3;
 }
 
-.section-title h1{
+
+.section-title h2{
     background-color: #fafafa;
     width: auto;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding: 20px 20px;
+    animation: dragIn 250ms ease-in-out 0s forwards;
+    transform-origin: bottom;
 }
-.section-title::before{
-    
+@keyframes dragIn{
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity:1;
+    }
+}
+
+.section-title::before{    
     position: absolute;
     content: "";
     height: 2px;
     width: 40%;
     background: rgb(80, 189, 198);
     right: 50%;
-    z-index: 1;
+    z-index: 0;
+    animation: scaleFromZero 450ms ease-in 0s forwards;
+    transform-origin: right;
 }
-.section-title::after{
-    
+
+@keyframes scaleFromZero {
+    0% {
+        opacity:0;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity:1;
+        transform: scaleX(1);
+        
+    }
+}
+
+.section-title::after{    
     position: absolute;
     content: "";
     height: 2px;
     width: 50%;
     background: rgb(80, 189, 198);
     right: 10%;
-    z-index: 1;
+    z-index: 0;
+    animation: scaleFromZero 450ms ease-in 0s forwards;
+    transform-origin: left;
 }
-
 
 .eventHighlights {
     position: relative;
@@ -330,18 +360,117 @@ nav li a{
     
 }
 
-.eventHighlights > div {
-
+.upcommingEvent{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
 }
 
+.upcommingEvent .section-title,
+.upcommingEvent .section-title h2
+{
+    background-color: #ffffff;
+    color: #010207;
+}
+
+.upcomming-card{
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    margin-top: 3rem;
+    height: calc(35vw + 100px) ;
+    max-height: 35rem;
+    width: calc(50% + 100px);
+    border-radius: 10px;
+    box-shadow: 10px 30px 60px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.upcomming-card img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.upcomming-card::after{
+    position:absolute;
+    content:'1st Nov';
+    top:1rem;
+    left: calc(50% - 5rem);
+    z-index: 99;
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 3rem;
+    text-align:center;
+    background-color:#010207;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0.3rem;
+    line-height: 1.2;    
+}
+
+.details{
+    position: relative;
+}
+
+.upcommingEvent .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2% 3%;
+}
+
+.details i{
+    font-size: 1.8rem;
+    color:#010207
+}
+.details span{
+    position: absolute;
+    left: 20%;    
+    border-left: 2px dotted #ccc;
+    padding: 6px;
+}
+
+.details div{
+    display: flex;
+    align-items: center;
+}
+.details h2 h3{
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+button{
+    background-color: #010207;
+    padding: 10px 16px;
+    color: #ffffff;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #010207;
+    font-weight: 900;
+}
 .bottomNavigation {
    
 /*    background-color: #2196f3;
     padding: 6px;*/
 }
 
-.bottomNavigation > div {
-    background-color: #fafafa;
+footer {
+    background-color: #010207;
+    color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 30px;
@@ -377,4 +506,39 @@ nav li a{
     .main-card .description {
         margin-top: 35%;
     }
+}
+
+@media screen and (max-width: 992px){
+    .details p , h3{
+        display:none;
+    }
+    .details button{
+        font-size: 14px
+    }
+}
+@media screen and (max-width: 780px){
+    .details {
+        font-size: 12px;
+    }
+    .details button{
+        font-size: 12px;
+        width: 90%;
+    }
+    .upcomming-card h2{
+        margin-top: -20px;
+    }
+    
+}
+@media screen and (max-width: 580px){
+    .upcomming-card {
+        height: 20rem;
+    }
+    .details h2{
+        font-size: 14px;
+    }
+ 
+    .details i{
+        font-size: 14px;
+    }
+    
 }
