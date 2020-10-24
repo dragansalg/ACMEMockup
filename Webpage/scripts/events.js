@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded",function(){
-//fetching dats from external json file 
-fetch('../scripts/events.json')
-    .then(response=>response.json())
-    .then(data=>{
-    // stringify the json and sending data to local storage.
-    localStorage.setItem('full_event',JSON.stringify(data));
-});
 //collecting stored data from local storage and parse it.
 let event_list=JSON.parse(localStorage.getItem("full_event"));
 console.log(event_list);
