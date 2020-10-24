@@ -1,14 +1,23 @@
  [
     {
         "id":1,
+        "category":"Sports",
+        "name":"Stockholm International Horse Show",
+        "Date": "2021-02-18T09:30:00",
+        "Venue": "Friends Arena",
+        "imageLocation":"../images/horse_show.jpg"
+
+    },
+    {
+        "id":2,
         "category":"Conference",
         "name":"Conference on Green Energy & Technology",
         "Date": "2021-01-06T10:00:00",
         "Venue": "Aula Magna, Stockholm University",
         "imageLocation":"../images/conference_greenenergy.jpg"
-    },    
-    {
-        "id":2,
+    },
+    {   
+        "id":3,
         "category":"Conference",
         "name":"Advances in Health Care",
         "Date": "2021-02-05T10:00:00",
@@ -16,15 +25,6 @@
         "imageLocation":"../images/conference_health.jpg"
 
     }, 
-    {
-        "id":3,
-        "category":"Sports",
-        "name":"Stockholm International Horse Show",
-        "Date": "2021-02-18T09:30:00",
-        "Venue": "Friends Arena",
-        "imageLocation":"../images/horse_show.jpg"
-
-    },  
     {
         "id":4,
         "category":"Music/Show",

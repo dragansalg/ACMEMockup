@@ -6,13 +6,24 @@ body{
 h1#event_head{
     text-align: center;
     font-weight: bold;
-   
     margin:20px;
 }
 #events{
     width:90%;
     margin:2% auto;
+
 }
+div.event_list{
+    width:500px;
+    display:inline-block;
+    margin:2%;
+}
+.event_list img{
+width:100%;
+padding:1%;
+}
+    
+    /*
 .event_img{
     padding-top:2%;
    max-width:100%;
@@ -20,9 +31,10 @@ h1#event_head{
 div.event_list{
     display:inline-block;
     margin:2%;
-}
+}*/
 h3{
     text-align: center;
+    font-size: 1em;
 }
 h3:hover{
     text-decoration:underline;
@@ -41,20 +53,26 @@ select,option{
     font-weight: bold;
 }
 option{
-    font-size:1em;
+    font-size:0.7em;
     line-height: 1em;
 }
 #filter_bar{
-    width:50%;
+    width:70%;
     text-align:center;
-    
     margin:0px auto;
-
+    font-size:1.1em;
+    font-weight:bold; 
 }
 #filter_bar p{
     display:inline;
     text-align:center;
-    font-size:1.2em;
-    padding:5px;
-    font-weight:bold;
+    border-right: 2px solid black;
+    padding:0px 10px;      
 }
+
+#filter_bar p:hover{
+    color:rgb(32, 9, 161);
+    text-decoration: underline;
+    cursor:pointer;
+}
+
