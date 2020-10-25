@@ -13,7 +13,11 @@ class AllEvents{
         this.filter();//method to filter events according to category
         this.sort_date=document.getElementById("select");//a property for select
         this.sort_date.addEventListener("change",()=>{//click event runs the method to compare date of the event and sort according to it
-            this.sortDate(this.all_events); 
+            if (this.sort_date.options[this.sort_date.selectedIndex].text === "Date") {
+                this.sortDate(this.all_events); }
+            if (this.sort_date.options[this.sort_date.selectedIndex].text === "Id") {
+                this.sortId(this.all_events); 
+            }
         });
     }
     //methods to show events
@@ -59,71 +63,23 @@ class AllEvents{
             }
         })
     }
+    //sort according to date
     sortDate(event_list) {
         let sorted = event_list.sort(function (a, b) {
-            return new Date(a.Date) - new Date(b.Date);
+            let date1=a.Date.slice(0,10);
+            let date2=b.Date.slice(0,10);
+            return new Date(date1) - new Date(date2);
+        })
+        document.getElementById("events").remove();
+        this.showAll(sorted);
+    }
+    //sort according to Id
+    sortId(event_list){
+        let sorted=event_list.sort((a,b)=>{
+            return a.id-b.id
         })
         document.getElementById("events").remove();
         this.showAll(sorted);
     }
 }
-/*document.addEventListener("DOMContentLoaded",function(){
-    const events=document.getElementById("events");
-    console.log(events);
-    let my_select=document.getElementById("select");
-    let filter=document.getElementById("filter");
-    my_select.addEventListener("change",(e)=>{
-        if(my_select.value=="date"){
-                my_select.remove();
-                let date_select=document.createElement("select");
-                date_select.setAttribute("id","date_select");
-                let order=document.createElement("option");
-                order.setAttribute("value","order");
-                order.innerHTML="Sort in order of event date";
-                let reverse=document.createElement("option");
-                reverse.setAttribute("value","reverse");
-                reverse.innerHTML="Sort in reverse order of event date";
-                date_select.appendChild(order);
-                date_select.appendChild(reverse);
-                filter.appendChild(date_select);
-                date_select.addEventListener("change",(e)=>{
-                    if(date_select.value=="reverse"){
 
-                    }
-                })
-            }
-        if(my_select.value=="title"){
-                
-            }
-        if(my_select.value=="category"){
-                
-            }
-    })
-   let filter_bar=document.getElementById("filter_bar");
-   let event_list= document.getElementsByClassName("event_list");
-   filter_bar.addEventListener("click",function(e){
-        if(e.target.innerHTML=="CONFERENCE"){   
-            for(let i=event_list.length-1;i>=0;i--){
-                 if(event_list[i].className!="event_list conference"){
-                     console.log(event_list[i]);
-                   event_list[i].remove();
-            }
-        }
-    }
-        if(e.target.innerHTML=="MUSIC/SHOW"){ 
-            showAll();  
-           /* for(let i=event_list.length-1;i>=0;--i){
-                 if(event_list[i].className!=="event_list show"){
-                     console.log(event_list[i]);
-                   event_list[i].remove();
-            }
-        }
-      }
-      function showAll(){
-          document.getElementById("events").remove();
-          console.log(events);
-          console.log("hi");
-
-      }
-    })
-})*/

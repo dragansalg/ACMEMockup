@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 body{
     margin:5%;
     background-color: #d9d9d9;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
 }
 h1#event_head{
     text-align: center;
@@ -17,10 +19,13 @@ div.event_list{
     width:500px;
     display:inline-block;
     margin:2%;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
 }
 .event_list img{
 width:100%;
 padding:1%;
+border-radius: 10px;
+object-fit: cover;
 }
     
     /*

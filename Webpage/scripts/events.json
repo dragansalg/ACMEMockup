@@ -28,7 +28,7 @@
         "id":4,
         "category":"Wedding",
         "name":"Church Wedding",
-        "Date": "2021-3-31T11:00:00Z",
+        "Date": "2021-03-31T11:00:00Z",
         "Venue": "Vikingatan",
         "imageLocation":"../images/church_wedding.jpg"
     },
