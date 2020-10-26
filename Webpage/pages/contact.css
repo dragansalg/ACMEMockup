@@ -27,15 +27,9 @@ html {
   justify-self: end;
 
   border-radius: 20px;
-  box-shadow: 0.5rem 0.5rem 0.8rem -0.1rem ;
+  box-shadow: 0.5rem 0.5rem 0.8rem -0.1rem;
 
   padding: 1rem;
-}
-
-.contactPerson:nth-child(even) {
-  grid-template-areas: "img text";
-  grid-template-columns: fit-content(360px) fit-content(70ch);
-  justify-self: start;
 }
 
 .text {
@@ -46,4 +40,24 @@ html {
   height: auto;
   grid-area: img;
   border-radius: 50px;
+}
+.contactPerson:nth-child(even) {
+  grid-template-areas: "img text";
+  grid-template-columns: fit-content(360px) fit-content(70ch);
+  justify-self: start;
+}
+
+@media (max-width: 650px) {
+  .contactPerson {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+  }
+  .contactPerson:nth-child(even) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+  }
 }
