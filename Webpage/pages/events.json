@@ -5,24 +5,21 @@
         "name":"Conference on Green Energy & Technology",
         "Date": "2021-01-06T10:00:00",
         "Venue": "Aula Magna, Stockholm University",
-        "organizer":
+        
     },    
     {
         "id":2,
         "category":"Conference",
         "name":"Advances in Health Care",
         "Date": "2021-02-05T10:00:00",
-        "Venue": "Aula Medica,Karolinska Institutet",
-        "organizer":
-        "tickets":
+        "Venue": "Aula Medica,Karolinska Institutet"
     }, 
     {
         "id":3,
         "category":"Sports",
         "name":"Stockholm International Horse Show",
         "Date": "2021-02-18T09:30:00",
-        "Venue": "Friends Arena",
-        "organizer":
+        "Venue": "Friends Arena"
 
     },  
     {
@@ -31,39 +28,35 @@
         "name":"Seven Worlds one planet (BBC Show)",
         "Date": "2021-03-07T20:00:00",
         "Venue": "Ericsson Globe",
-        "organizer":
+        
     },
     {
         "id":5,
         "category":"Wedding",
         "name":"Wedding- beach theme ",
         "Date": "2021-03-15T11:00:00",
-        "Venue": "Sandhamn",
-        "organizer":
+        "Venue": "Sandhamn"
     },
     {
         "id":6,
         "category":"Sports",
         "name":"ISU World figure skating Championship",
         "Date": "2021-03-22T07:00:00",
-        "Venue": "Ericsson Globe",
-        "organizer":
+        "Venue": "Ericsson Globe"
     },
     {
         "id":7,
         "category":"Wedding",
         "name":"Church Wedding",
         "Date": "2021-3-31T11:00:00",
-        "Venue": "Vikingatan",
-        "organizer":
+        "Venue": "Vikingatan"
     },
     {
         "id":8,
         "category":"Music/Show",
         "name":"Hans Zimmer Live",
         "Date": "2021-04-01T18:00:00",
-        "Venue": "Ericsson Globe",
-        "organizer":
+        "Venue": "Ericsson Globe"
     },
     
     {
@@ -71,7 +64,6 @@
         "category":"Music/Show",
         "name":"Bryan Adams- Shine A Light",
         "Date": "2021-04-22T20:00:00",
-        "Venue": "Ericsson Globe",
-        "organizer":
+        "Venue": "Ericsson Globe"
     }
 ]
