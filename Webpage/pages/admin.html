@@ -37,7 +37,14 @@
     <input type="text" id="title" placeholder="Title">
     <br />
     Category:
-    <input type="text" id="category" placeholder="Category">
+    <!--<input type="text" id="category" placeholder="Category">-->
+    <select name="category" id="category">
+        <option value="" disabled selected hidden>Choose category</option>
+        <option value="conference">Conference</option>
+        <option value="music/show">Music/Show</option>
+        <option value="sports">Sports</option>
+        <option value="wedding">Wedding</option>
+    </select>
     <br />
     Venue:
     <input type="text" id="venue" placeholder="Venue">
@@ -47,6 +54,8 @@
     <br />
     <input type="time" id="time" placeholder="title">
     <br />
+
+    <button type="submit" id="btn">submit</button>
     
 
 
