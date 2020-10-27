@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           for(let i = 0; i < admins.length; i++) {
                if(input_username == admins[i].username && input_password == admins[i].password) {
-                    console.log("it's a match");
+                    window.location.href="../pages/admin.html?username="+input_username;
                     return;                    
                }                             
           }
