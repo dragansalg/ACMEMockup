@@ -3,25 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/frontpageStyling.css" rel="stylesheet">
+    <link href="../css/mainpage.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/15d187da22.js" crossorigin="anonymous"></script>
     <title>ACME Events</title>
 </head>
 <body>
+  
     <div class="topNavigation">
-        <div class="menulist">Menu</div>
-        <div class="header">
-            <img class="logo" src="../images/logo_2.png">
+        <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+        
+        <label for="toggle-checkbox" class="menulist">
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="">Item 1</a> </li>
+                <li><a href="">Item 2</a> </li>
+                <li><a href="">Item 4</a> </li>
+                <li><a href="">Item 3</a> </li>
+                <li><a href="">Item 5</a> </li>
+                
+            </ul>
+        </nav>
+        
+        <div class="logo"><img src="../images/logo-v3.png"></div>
+    </div>
+
+    <div class="section-title"><h2>Highlighted Events</h2></div>
+    
+    <div class="eventHighlights">
+    
+        <div class="main-card">
+            <p class="category">Concert <span>10/12</span> </p>
+            <h2 class="title">Michael Jackson Live!</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. 
+            </p>
+            <p class="place"> Madison Square Garden </p>
+            <i class="fas fa-bookmark"></i>
+
+        </div>
+        <div class="card">
+            <img src="../images/bbc.jpg" alt="">  
+            <p class="category">Exibition</p>
+            <h2 class="title">This is an Art Exibition</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. 
+            </p>
+            <p class="date">20 de Agosto de 2021</p>
+            <i class="fas fa-bookmark"></i>
+        </div>
+        <div class="card">
+            <img src="../images/church_wedding.jpg" alt="">  
+            <p class="category">Wedding</p>
+            <h2 class="title">This is a Wedding</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. 
+            </p>
+            <p class="date">17 de Outubro de 2023</p>
+            <i class="fas fa-bookmark"></i>
+        </div>
+        <div class="card">
+            <img src="../images/conference_health.jpg" alt="">  
+            <p class="category">Conference</p>
+            <h2 class="title">This is a Conference</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. 
+            </p>
+            <p class="date">16 de Novembto de 2022</p>
+            <i class="fas fa-bookmark"></i>
+        </div>
+        <div class="card">
+            <img src="../images/people-concert3.jpeg" alt="">  
+            <p class="category">Concert</p>
+            <h2 class="title">This is a Concert</h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. 
+            </p>
+            <p class="date">20 de Outubro de 2030</p>
+            <i class="fas fa-bookmark"></i>
+        </div>
+        
+
+    </div>
+
+
+    <div class="upcommingEvent">
+        <div class="section-title"><h2>Upcomming Event</h2></div>
+        <div class="upcomming-card">
+            <img src="../images/hans_zimmer.jpg" class="upcomming-card-img" alt="">
+            <div class="details">
+                <h2>This Awesome Concert is Happening Soon!</h2>
+                <div><i class="far fa-calendar-check"></i><span><b>Sunday, November 1st of 2020</b><br />21:00 to 24:00</span></div>
+                <div><i class="fas fa-map-marker-alt"></i><span><b><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Ericsson%20Globe%2C%20Stockholm%2C%20Stockholm%20County&query_place_id=ChIJf4RipyZ4X0YRpPW30o9sWyo">
+                    Get Directions</a> </b><br /> Globen Arena</span>
+                </div>
+                <h3>Event Details:</h3>
+                <p> 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                    aliqua. 
+                </p>
+                <button>Buy Tickets</button>
+            </div>
         </div>
     </div>
-
-    <div class="eventHighlights">
-        <div class="itemHighlight">Main</div>
-        <div class="itemText">Text</div>
-    </div>
-
-    <div class="bottomNavigation">
-        <div class="footer">Footer</div>
-    </div>
+    
+    <!-- <div class="browseEventsArea">
+        <div class="section-title"><h2>Search for Events Here</h2></div>
+        <p>Browse Your Events Here - Filter by date - Location - Category</p>
+    </div> -->
+    
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
     
 </body>
 </html>
