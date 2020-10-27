@@ -9,20 +9,34 @@ h1#event_head{
     text-align: center;
     font-weight: bold;
     margin:20px;
+    font-size:220%;
+}
+.container_filter{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.filter_bar{
+    font-size: 90%;
 }
 #events{
     width:90%;
     margin:2% auto;
-
+    display:grid;
+    grid-gap:20px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
 }
+
 div.event_list{
-    width:500px;
-    display:inline-block;
-    margin:2%;
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width:400px){
+    #events{
+    grid-template-columns: 1fr;
+
+}}
 .event_list img{
-width:100%;
+max-width:100%;
 padding:1%;
 border-radius: 10px;
 object-fit: cover;
