@@ -1,20 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 body{
     margin:5%;
     background-color: #d9d9d9;
+    font-family: 'Nanum Myeongjo', serif;
 }
-h1#event_page{
+h1#event_head{
     text-align: center;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:20px;
+    font-size:220%;
 }
+.container_filter{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.filter_bar{
+    font-size: 90%;
+}
+#events{
+    width:90%;
+    margin:2% auto;
+    display:grid;
+    grid-gap:20px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.event_list{
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width:400px){
+    #events{
+    grid-template-columns: 1fr;
+
+}}
+.event_list img{
+max-width:100%;
+padding:1%;
+border-radius: 10px;
+object-fit: cover;
+}
+    
+    /*
 .event_img{
+    padding-top:2%;
    max-width:100%;
 }
 div.event_list{
     display:inline-block;
     margin:2%;
-}
+}*/
 h3{
     text-align: center;
+    font-size: 1em;
+}
+h3:hover{
+    text-decoration:underline;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+#filter{
+    width: 20%;
+    margin:3% auto;
+}
+select,option{
+    width:100%;
+    height: 2vw;
+    font-weight: bold;
+}
+option{
+    font-size:0.7em;
+    line-height: 1em;
+}
+#filter_bar{
+    width:70%;
+    text-align:center;
+    margin:0px auto;
+    font-size:1.1em;
+    font-weight:bold; 
+}
+#filter_bar p{
+    display:inline;
+    text-align:center;
+    border-right: 2px solid black;
+    padding:0px 10px;      
+}
+
+#filter_bar p:hover{
+    color:rgb(32, 9, 161);
     text-decoration: underline;
+    cursor:pointer;
 }
