@@ -4,11 +4,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     btn.addEventListener("click", ()=> {
         let event = new New_Event;
-        console.log(event);
+        //console.log(event);
+        //let events = JSON.parse(localStorage.getItem('full_event'));
+        //console.log(events);
     })
+
+
     class New_Event {
         constructor(events){
-            this.input_title = document.getElementById("title").value;
+            this.input_name = document.getElementById("name").value;
             this.input_category = document.getElementById("category").value;
             this.input_venue = document.getElementById("venue").value;
             this.input_date = document.getElementById("date").value;
@@ -19,14 +23,20 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         saveNewEvent(){
             let events = JSON.parse(localStorage.getItem('full_event'));
-            this.id = events[events.length-1].id++;
+            this.id = Number(events[events.length-1].id)+1;
+            
             let new_event = {
                 id: this.id,
-                title: this.title,
-                category: this.category,
-                
+                category: this.input_category,
+                name: this.input_name,
+                date: this.input_date+"T"+this.input_time,
+                venue: this.input_venue,                
             }
-            events.push("something here")
+            //console.log(events);
+            events.push(new_event);
+            localStorage.setItem("full_event", JSON.stringify(events));
+            console.log(events.length);
+            console.log(events);
         }
     }
 
