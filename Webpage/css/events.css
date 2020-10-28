@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 body{
     margin:5%;
-    background-color:#fafafa;
+    background-color: #d9d9d9;
     font-family: 'Nanum Myeongjo', serif;
 }
 h1#event_head{
@@ -29,7 +29,6 @@ h1#event_head{
 
 div.event_list{
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-    border-radius:10px;
 }
 @media screen and (max-width:400px){
     #events{
@@ -95,4 +94,3 @@ option{
     text-decoration: underline;
     cursor:pointer;
 }
-
