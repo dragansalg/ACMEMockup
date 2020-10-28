@@ -41,9 +41,12 @@ class AllEvents{
     }
     //filters event accorging to category
     filter(){
-        let filter_bar=document.getElementById("filter_bar");
-        filter_bar.addEventListener("click",(e)=>{
+        let event_filter=document.getElementsByClassName("event_filter");
+        console.log(event_filter);
+        for(let i=0;i<event_filter.length;i++){
+        event_filter[i].addEventListener("click",(e)=>{
             document.getElementById("events").remove();
+           
             if(e.target.innerHTML=="ALL")this.showAll(this.all_events);
             if(e.target.innerHTML=="CONFERENCE"){
                 let conference=this.all_events.filter(value=> value.category==="Conference");
@@ -62,12 +65,14 @@ class AllEvents{
                 this.showAll(wedding);
             }
         })
+        }
+      
     }
     //sort according to date
     sortDate(event_list) {
         let sorted = event_list.sort(function (a, b) {
-            let date1=a.Date.slice(0,10);
-            let date2=b.Date.slice(0,10);
+            let date1=a.date.slice(0,10);
+            let date2=b.date.slice(0,10);
             return new Date(date1) - new Date(date2);
         })
         document.getElementById("events").remove();
