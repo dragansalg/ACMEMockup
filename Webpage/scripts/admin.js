@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
     if (!localStorage.getItem("is_logged_in")){
         window.location.replace("../pages/login.html");
     }
-
+    let log_out = document.getElementById("admin_logout");
     let btn = document.getElementById("btn");
+
+    log_out.addEventListener("click", ()=>{
+        localStorage.removeItem("is_logged_in");
+        window.location.replace("../pages/login.html");
+    })
 
     btn.addEventListener("click", ()=> {
         let event = new New_Event;
