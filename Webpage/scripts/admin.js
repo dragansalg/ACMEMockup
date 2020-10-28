@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.input_venue = document.getElementById("venue").value;
             this.input_date = document.getElementById("date").value;
             this.input_time = document.getElementById("time").value;
+            this.image=document.getElementById("image").value;
             this.id = 0;
             this.saveNewEvent();
         }
@@ -39,7 +40,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 category: this.input_category,
                 name: this.input_name,
                 date: this.input_date+"T"+this.input_time,
-                venue: this.input_venue,                
+                venue: this.input_venue, 
+                imageLocation:"../images/"+this.image+".jpg"             
             }
             //console.log(events);
             events.push(new_event);
