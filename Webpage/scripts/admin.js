@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     
+    if (!localStorage.getItem("is_logged_in")){
+        window.location.replace("../pages/login.html");
+    }
+
     let btn = document.getElementById("btn");
 
     btn.addEventListener("click", ()=> {
