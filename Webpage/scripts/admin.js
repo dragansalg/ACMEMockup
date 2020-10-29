@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.logout = document.getElementById("admin_logout");
             this.edit = document.getElementById("admin_edit")
             this.new_event = document.getElementById("admin_create");
+            this.delete_event = document.getElementById("admin_delete");
             this.create_btn = document.getElementById("btn");
             this.edit_btn = document.getElementById("btn_edit")
             this.h2 = document.getElementById("main_heading");
@@ -21,11 +22,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 this.showAddEventForm();
             })
 
+            this.delete_event.addEventListener("click", () => {
+                this.showDeleteEventArea();
+            })            
+
             this.logout.addEventListener("click", () => {
                 this.endSession();
             })
 
             
+        }
+
+        showDeleteEventArea(){
+            console.log("hi");
         }
 
         showEditEventArea(){
@@ -43,19 +52,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
             let date = document.getElementById("date");
             let time = document.getElementById("time");
 
-            all_events.forEach(evnt => {            
-                console.log(evnt)          
+            all_events.forEach(event => {            
+                console.log(event.date)          
                 let option = document.createElement("option");
                 option.id = "option_id"
-                option.setAttribute("value", evnt.id);
-                option.innerHTML = evnt.name;
+                option.setAttribute("value", event.id);
+                option.innerHTML = event.name;
                 this.select_id.appendChild(option);
 
-                name.value = evnt.name;
-                venue.value = evnt.venue;
-                category.value = evnt.category;
-                date.value = evnt.date.split("T")[0];
-                time.value = evnt.date.split("T")[1];
+                name.value = event.name;
+                venue.value = event.venue;
+                category.value = event.category;
+                date.value = event.date.split("T")[0];
+                time.value = event.date.split("T")[1];
         
             })
             let option = document.getElementById("option_id");
@@ -63,19 +72,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.select_id.addEventListener("change", e =>{
                 let id = e.target.value;
                 
-                let focused_event = all_events.filter(evnt => evnt.id == id);
-                console.log(id)
+                let focused_event = all_events.filter(event => event.id == id);
+                //console.log(id)
                 let category = document.getElementById("category");
                 let name = document.getElementById("name");
                 let venue = document.getElementById("venue");
                 let date = document.getElementById("date");
                 let time = document.getElementById("time");
-
-                name.value = focused_event.name;
-                venue.value = focused_event.venue;
-                category.value = focused_event.category;
-                date.value = focused_event.date.split("T")[0];
-                time.value = focused_event.date.split("T")[1];
+                //console.log(focused_event[0]);
+                name.value = focused_event[0].name; //added [0] to target the actual object in the array
+                venue.value = focused_event[0].venue; //added [0] to target the actual object in the array
+                category.value = focused_event[0].category; //added [0] to target the actual object in the array
+                date.value = focused_event[0].date.split("T")[0];
+                time.value = focused_event[0].date.split("T")[1];
 
             })
         }
@@ -84,7 +93,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.h2.innerHTML = "Add a New Event Here"
             this.edit_btn.classList.add("hide");
             this.create_btn.classList.remove("hide");
-            this.select_id.classList.add("hide");
+            this.select_id.classList.add("hide");            
         }
 
         endSession(){
@@ -131,8 +140,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 localStorage.setItem("full_event", JSON.stringify(events));
                 document.getElementById("btn").classList.add("success")
             }
-            console.log(events.length);
-            console.log(events);
+            //console.log(events.length);
+            //console.log(events);
         }
     }    
 
