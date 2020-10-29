@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link href="../css/mainpage.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+
 </head>
 <body>
+    <div class="topNavigation">
+        <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+        
+        <label for="toggle-checkbox" class="menulist">
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="">Item 1</a> </li>
+                <li><a href="">Item 2</a> </li>
+                <li><a href="">Item 4</a> </li>
+                <li><a href="">Item 3</a> </li>
+                <li><a href="">Item 5</a> </li>
+                
+            </ul>
+        </nav>
+        
+        <div class="logo"><img src="../images/logo-v3.png"></div>
+    </div>
     <div class="container">
         <form class="form" id="login">
-            <h1 class="form-title">Login</h1>
-            <!--<div class="form-message form-message-error">Incorrect username/password</div>-->
-            <div class="form-input-group">
-                <input type="text" class="form-input" id="username" autofocus placeholder="username or email">
-                <!--<div class="form-input-error-message">This is an error message</div>-->
-            </div>
-            <div class="form-input-group">
-                <input type="password" class="form-input" id="password" placeholder="password">
-                <div class="form-input-error-message"></div>
-            </div>
-            <button class="form-button" id="button" type="submit">Login</button>          
+            <h1>Login</h1>           
+            <input type="text" id="username" autofocus placeholder="username or email">
+            <input type="password" id="password" placeholder="password">
+            <button id="button"  type="submit">Login</button>          
         </form>
+
     </div>
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
     <script src="../javascript/login.js"></script>
 </body>
 </html>

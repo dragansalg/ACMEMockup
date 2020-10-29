@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 body{
     margin:5%;
-    background-color: #d9d9d9;
+    background-color: #fafafa;
     font-family: 'Nanum Myeongjo', serif;
 }
 h1#event_head{
@@ -29,6 +29,7 @@ h1#event_head{
 
 div.event_list{
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius:10px;
 }
 @media screen and (max-width:400px){
     #events{
@@ -68,23 +69,22 @@ a{
 }
 select,option{
     width:100%;
-    height: 2vw;
+    height: 4vh;
     font-weight: bold;
 }
 option{
-    font-size:0.7em;
-    line-height: 1em;
+    font-size:1em;
+    line-height: 2em;
 }
 #filter_bar{
-    width:70%;
     text-align:center;
     margin:0px auto;
-    font-size:1.1em;
     font-weight:bold; 
 }
 #filter_bar p{
     display:inline;
     text-align:center;
+    font-size:  1.1rem;
     border-right: 2px solid black;
     padding:0px 10px;      
 }
@@ -93,4 +93,34 @@ option{
     color:rgb(32, 9, 161);
     text-decoration: underline;
     cursor:pointer;
+}
+.bottomNavigation{
+    background-color: black;
+    color:white;
+}
+.bottomNavigation div{
+    text-align:center;
+    padding:1%;
+}
+.info p{
+    padding:1%;
+}
+.social i{
+    padding:1%
+}
+
+@media screen  and (min-width:700px){
+    .info{
+        width:60%;
+        margin:0px auto;
+        display:flex;
+        justify-content: space-around;
+    }
+    .social{
+        width:15%;
+        margin:0px auto;
+        
+        display:flex;
+        justify-content: space-around;
+    }
 }
