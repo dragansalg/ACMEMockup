@@ -60,10 +60,18 @@
                 <label for="venue">Venue:</label> 
                 <input type="text" id="venue" placeholder="Venue" required>
 
-                <label for="date">Date:</label> 
-                <input type="date" id="date" placeholder="title" required>
-                <label for="time">Time:</label> 
-                <input type="time" id="time" placeholder="title" required>
+            <label for="date">Date:</label> 
+            <input type="date" id="date" placeholder="title">
+            <label for="time">Time:</label> 
+            <input type="time" id="time" placeholder="title">
+            <select name="image" id="image">
+                <option value="" disabled selected hidden>Choose image</option>
+                <option value="conference">Conference</option>
+                <option value="music">Music/Show</option>
+                <option value="sports">Sports</option>
+                <option value="wedding">Wedding</option>
+            </select>
+            
             
         
                 <button id="btn">Create New Event</button> 
