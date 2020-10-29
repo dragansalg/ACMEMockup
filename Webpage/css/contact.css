@@ -10,16 +10,19 @@ html {
 }
 
 .container {
+  background-color: #FAFAFA;
   display: grid;
   max-height: 100%;
   max-width: 100%;
+  
   gap: 1.5rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
-  padding: 0.7rem;
+  padding: 0rem 0.7rem 2rem;
 }
 
 .contactPerson {
+  background-color: white;
   display: grid;
   grid-template-columns: minmax(10ch, 70ch) fit-content(360px);
   grid-template-areas: "text img";
