@@ -1,5 +1,5 @@
 //fetching dats from external json file and sending it to local storage.
-fetch('events.json')
+fetch('../scripts/events.json')
     .then(response=>response.json())
     .then(data=>{
     // stringify the json and sending data to local storage.

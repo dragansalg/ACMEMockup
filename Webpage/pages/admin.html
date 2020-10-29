@@ -32,28 +32,33 @@
         <div class="logo"><img src="../images/logo-v3.png"></div>
     </div>
 
-    <div class="container">
+    <div  class="container">
         <aside>
             <div class="aside_links"><i class="far fa-edit"></i><span id="admin_edit">Edit Events</span></div>
             <div class="aside_links"><i class="far fa-newspaper"></i></i><span id="admin_create">Create New Events</span> </div>
             <div class="aside_links"><i class="fas fa-sign-out-alt"></i><span id="admin_logout">Log out</span></div>
         </aside>
-        <main>
-            <h2>Add a New Event Here</h2>
-            <label for="name">Title:</label> 
-            <input type="text" id="name" placeholder="Title">
+       
+        <main id= "main">
+            <h2 id="main_heading">Add a New Event Here</h2>
             
-            <label for="category">Category:</label> 
-            <select name="category" id="category">
-                <option value="" disabled selected hidden>Choose category</option>
-                <option value="Conference">Conference</option>
-                <option value="Music/Show">Music/Show</option>
-                <option value="Sports">Sports</option>
-                <option value="Wedding">Wedding</option>
-            </select>
+            <form action="">
+                <select id="id" class="hide">
+                </select>
+                <label for="name">Title:</label> 
+                <input type="text" name="title" id="name" required placeholder="Title">
+                
+                <label for="category">Category:</label> 
+                <select id="category" required>
+                    <option value="" disabled selected hidden>Choose category</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Music/Show">Music/Show</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Wedding">Wedding</option>
+                </select>
 
-            <label for="venue">Venue:</label> 
-            <input type="text" id="venue" placeholder="Venue">
+                <label for="venue">Venue:</label> 
+                <input type="text" id="venue" placeholder="Venue" required>
 
             <label for="date">Date:</label> 
             <input type="date" id="date" placeholder="title">
@@ -69,7 +74,11 @@
             
             
         
-            <button type="submit" id="btn">submit</button>
+                <button id="btn">Create New Event</button> 
+                <br />
+                <br />
+                <button id="btn_edit" class="hide">Confirm Changes</button> 
+            </form>
         </main>
         
 
@@ -81,7 +90,7 @@
 
     
     <footer class="footer">
-        <p>Footer</p>
+        <p>Footer</p> 
     </footer>
     
 </body>
