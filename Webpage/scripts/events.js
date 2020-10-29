@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded",function(){    
     //collecting stored data from local storage and parse it.
     let event_list=JSON.parse(localStorage.getItem("full_event"));
     console.log(event_list);
