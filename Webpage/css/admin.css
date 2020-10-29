@@ -9,7 +9,7 @@ body{
 .container {
     display: flex;
     width: 100vw;
-    height: 100%;
+    height: 120vh;
     max-height: 200%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -19,11 +19,13 @@ body{
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       width: 100%;
+      height: 125%;
       background: #fafafa;
       margin-left: 10px;
+      padding-top: 2em;
   }
 
   
@@ -50,6 +52,7 @@ body{
 
   aside{
       width: 240px;
+      height: 125%;
       display: flex;
       flex-direction: column;
       font-size: 1em;
@@ -105,25 +108,14 @@ body{
     border: dashed 1px #313131;
 }
 
-.edit_events_container{
-   width: 100%;
-   height: fit-content;
-   position: relative;    
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: #fafafa;
-   margin-left: 10px;
-}
+.delete-message{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top : 1em;
+    padding: 0.5em;
+    background-color: #67E3F4;
+    color: #313131;
+    
+    border: dashed 1px #313131;
 
-.edit_card{
-    display: flex;
-    background: red;
-    border-radius: 10px;
-    width: 50%;
-    margin-bottom: 2em;
-}
-.edit_card img{
-    width: 20%;
-    border-radius: 10px;
 }

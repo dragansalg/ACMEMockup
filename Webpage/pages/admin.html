@@ -40,10 +40,18 @@
             <div class="aside_links"><i class="fas fa-sign-out-alt"></i><span id="admin_logout">Log out</span></div>
         </aside>
        
-        <main id= "main">
+        <main id= "main" class="hide-all">
             <h2 id="main_heading">Add a New Event Here</h2>
             
-            <form action="">
+            <div id="form-delete" class="hide" >
+                <select>
+                </select>
+                <button id="btn_delete">Delete Event</button>
+                <p id="delete-message"></span>
+            </div>
+
+
+            <form id="form" action="">
                 <select id="id" class="hide">
                 </select>
                 <label for="name">Title:</label> 
