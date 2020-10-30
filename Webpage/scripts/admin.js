@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.select_id = document.getElementById("id");
             this.btn_delete = document.getElementById("btn_delete");
             this.message_p = document.getElementById("delete-message");
+            this.add_image = document.getElementById("image");
             this.sidebarListeners();
         }
 
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
 
         showEditEventArea(){
+            this.add_image.classList.add("hide");
             this.form_delete.children[0].innerHTML = "";
             this.message_p.classList.remove("delete-message");
             this.message_p.innerHTML = "";  
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.form_delete.classList.add("hide");
             this.edit_btn.classList.remove("hide");
             this.create_btn.classList.add("hide");
-            this.h2.innerHTML = "Choose the event to be edited"
+            this.h2.innerHTML = "Choose the Event To Be Edited"
             this.select_id.classList.remove("hide");
             main.classList.remove('success');
             
@@ -143,7 +145,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         showAddEventForm(){
             this.message_p.classList.remove("delete-message");
             this.message_p.innerHTML = "";
-            
+            this.add_image.classList.remove("hide");
             this.select_id.innerHTML = "";
             this.form_delete.children[0].innerHTML = "";
             this.form.classList.remove("hide");
