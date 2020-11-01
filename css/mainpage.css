@@ -316,7 +316,7 @@ nav li a{
 }
 
 .category::before{
-    content: '•';
+    content: '• ';
 }
 .main-card .place {
     margin-top:auto;

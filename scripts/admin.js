@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", ()=>{
    
+    //The class Session is responsible for keeping track of logged in 
+    //users and the basic navigation of the admin page
     class Session {
         constructor(){
             this.logout = document.getElementById("admin_logout");
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.sidebarListeners();
         }
 
+        //Set up the event listerners for the sidebar links
         sidebarListeners(){
             this.edit.addEventListener("click", () => {
                 this.showEditEventArea();
@@ -39,6 +42,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             
         }
 
+        //this method will show the delete event area and take care of the 
+        //logics of deleting events from local storage
         showDeleteEventArea(){
             this.select_id.innerHTML = "";
             this.form.classList.add("hide");
@@ -66,6 +71,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             })
         }
 
+        //this method will show the edit event area and take care of the 
+        //logics of editing events from local storage
         showEditEventArea(){
             this.add_image.classList.add("hide");
             this.form_delete.children[0].innerHTML = "";
@@ -98,14 +105,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 option.id = "option_id_"+event.id
                 option.setAttribute("value", event.id);
                 option.innerHTML = event.name;
-                this.select_id.appendChild(option);
-
-                // name.value = event.name;
-                // venue.value = event.venue;
-                // category.value = event.category;
-                // date.value = event.date.split("T")[0];
-                // time.value = event.date.split("T")[1];
-        
+                this.select_id.appendChild(option);       
             })
            
 
@@ -113,9 +113,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 let id = e.target.value;
                 
                 let focused_event = all_events.filter(event => event.id == id);
-                //console.log(id)
                 
-                //console.log(focused_event[0]);
                 name.value = focused_event[0].name; //added [0] to target the actual object in the array
                 venue.value = focused_event[0].venue; //added [0] to target the actual object in the array
                 category.value = focused_event[0].category; //added [0] to target the actual object in the array
@@ -142,6 +140,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 document.getElementById("btn").classList.add("success")            })
         }
 
+        //this method will show the add event area 
+
         showAddEventForm(){
             this.message_p.classList.remove("delete-message");
             this.message_p.innerHTML = "";
@@ -156,12 +156,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
             this.select_id.classList.add("hide");            
         }
 
+        //This ends the session when user clicks the logout link
         endSession(){
             localStorage.removeItem("is_logged_in");
             window.location.replace("../pages/login.html");
         }     
     }
 
+    //The class New_Event takes care of adding a new event to local storage
     class New_Event {
         constructor(events){
             this.input_name = document.getElementById("name").value;
@@ -200,20 +202,23 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 localStorage.setItem("full_event", JSON.stringify(events));
                 document.getElementById("btn").classList.add("success")
             }
-            //console.log(events.length);
-            //console.log(events);
+     
         }
     }    
-
+    //Instantiate the class New_Event when the user clicks the "create new event" button
     const btn = document.getElementById("btn");
     btn.addEventListener("click", ()=> {
         let event = new New_Event;
     })
 
+    //This will recognize if the user is landing on the page after adding or editting 
+    //an event. Then it will add the class "success" to main Div
     if (window.location.href.search("title") != -1){
         document.getElementById("main").classList.add("success");
     }
 
+    //If the local storage item "is_logged_in" is defined, we initialize a new Session
+    //Otherwise we send the user back to the login page
     localStorage.getItem("is_logged_in")?
     new Session :
     window.location.replace("../pages/login.html");
